@@ -1,0 +1,35 @@
+---
+title: "Alcohol Consumption"
+author: "Mario Alonso Rodriguez & Raju Adhikari"
+date: "30 de septiembre de 2016"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data
+
+This is an assignment that utilizes fivethirtyeight.com's dataset on alcohol consumption in the world. This data is taken from the World Health Organization.  
+
+```{r Drinks}
+### First we load the data from fivethirtyeight's Github
+Drinks <- read.csv('https://raw.githubusercontent.com/fivethirtyeight/data/master/alcohol-consumption/drinks.csv')
+
+### We can take a look at the data
+View(Drinks)
+
+### We get a simple summary of descriptive statistics with this function
+summary(beer_servings)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
