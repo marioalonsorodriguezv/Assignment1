@@ -1,35 +1,70 @@
 ---
 title: "Alcohol Consumption"
 author: "Mario Alonso Rodriguez & Raju Adhikari"
-date: "30 de septiembre de 2016"
+date: "October 6th, 2016"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+### First, let's load all the packages that are needed
+library(dplyr)
+library(ggplot2)
+library()
 ```
 
 ## Data
 
 This is an assignment that utilizes fivethirtyeight.com's dataset on alcohol consumption in the world. This data is taken from the World Health Organization.  
 
-```{r Drinks}
-### First we load the data from fivethirtyeight's Github
+```{r Drinks, message=FALSE, warning=FALSE}
+### Load the raw data from fivethirtyeight's Github
 Drinks <- read.csv('https://raw.githubusercontent.com/fivethirtyeight/data/master/alcohol-consumption/drinks.csv')
 
-### We can take a look at the data
-View(Drinks)
+### A simple summary of descriptive statistics of all the dataset
+summary(Drinks)
 
-### We get a simple summary of descriptive statistics with this function
-summary(beer_servings)
+### The means of all the variables in the dataset
+for (i in 1:length(names(Drinks))) {
+    Drinks[, i] %>%
+    mean() %>%
+    round(digits = 1) %>%
+    paste(names(Drinks)[i], ., '\n') %>%  cat() }
+
+### Std deviation of all the variables 
+for (i in 1:length(names(Drinks))) {
+    Drinks[, i] %>%
+    sd() %>%
+    round(digits = 1) %>%
+    paste(names(Drinks)[i], ., '\n') %>%  cat() }
+
+
 ```
 
-## Including Plots
+## Histograms
 
-You can also embed plots, for example:
+Histograms are really usefull to look at the distribution of the data
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r histograms}
+### Distribution of beer consumption
+hist(Drinks$beer_servings,
+     main = 'Beer consumption',
+     xlab = 'Number of bottles of beer consumed in 2010')
+
+### Distribution of spirit consumption
+hist(Drinks$spirit_servings,
+     main = 'Spirit consumption',
+     xlab = 'Number of spirit shots consumed in 2010')
+
+### Distribution of wine consumption
+hist(Drinks$wine_servings,
+     main = 'Wine consumption',
+     xlab = 'Number of wine glasses consumed in 2010')
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Transformation of the data
+
+Seems like most of the countries consumed less than 50 of each in 2010. Let's unskew the distributions. 
+
+```{r transformation}
+
