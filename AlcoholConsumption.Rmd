@@ -15,7 +15,8 @@ library(dplyr)
 
 This is an assignment that utilizes fivethirtyeight.com's dataset on alcohol consumption in the world. This data is taken from the World Health Organization.  
 
-```{r Drinks, message=FALSE, warning=FALSE}
+```{r Drinks, message=FALSE, warning=FALSE, echo=TRUE}
+
 ### Load the raw data from fivethirtyeight's Github
 Drinks <- read.csv('https://raw.githubusercontent.com/fivethirtyeight/data/master/alcohol-consumption/drinks.csv')
 
@@ -36,28 +37,34 @@ for (i in 1:length(names(Drinks))) {
     round(digits = 1) %>%
     paste(names(Drinks)[i], ., '\n') %>%  cat() }
 
-
 ```
 
 ## Histograms
 
 Histograms are really usefull to look at the distribution of the data.
 
-```{r histograms}
+```{r histograms, echo=TRUE}
+
 ### Distribution of beer consumption
+
 hist(Drinks$beer_servings,
      main = 'Beer consumption',
-     xlab = 'Number of bottles of beer consumed in 2010')
+     xlab = 'Number of bottles of beer consumed in 2010',
+     border = 'blue')
 
 ### Distribution of spirit consumption
+
 hist(Drinks$spirit_servings,
      main = 'Spirit consumption',
-     xlab = 'Number of spirit shots consumed in 2010')
+     xlab = 'Number of spirit shots consumed in 2010', 
+     border = 'blue')
 
 ### Distribution of wine consumption
+
 hist(Drinks$wine_servings,
      main = 'Wine consumption',
-     xlab = 'Number of wine glasses consumed in 2010')
+     xlab = 'Number of wine glasses consumed in 2010',
+     border = 'blue')
 ```
 
 ## Transformation of the data
@@ -65,19 +72,19 @@ hist(Drinks$wine_servings,
 Seems like most of the countries consumed less than 50 of each in 2010. Let's unskew the distributions. 
 
 
-```{r transformation}
+```{r transformation, echo=TRUE}
 ## Remove cases with zeros
 Drinks[Drinks==0] <- NA
 Drinks <- na.omit(Drinks)
 
 ## Transformation of beer consumption
-log(Drinks$beer_servings) %>% hist(main = "Beer consumption in 2010")
+log(Drinks$beer_servings) %>% hist(main = "Beer consumption in 2010", border = 'blue')
 
 ## Transformation of spirits consumption
-log(Drinks$spirit_servings) %>% hist(main = "Spirit consumption in 2010")
+log(Drinks$spirit_servings) %>% hist(main = "Spirit consumption in 2010", border = 'blue')
 
 ## Transformation of spirits consumption
-log(Drinks$wine_servings) %>% hist(main = "Wine consumption in 2010")
+log(Drinks$wine_servings) %>% hist(main = "Wine consumption in 2010", border = 'blue')
 
 ```
 
