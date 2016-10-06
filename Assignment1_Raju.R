@@ -39,4 +39,5 @@ table(diamonds$cut, diamonds$color)
 
 #It simply shows that they are roughly equally distributed across cut. 
 
-# Please find another dataset in this link. 
+# Please find another dataset in this link.
+
