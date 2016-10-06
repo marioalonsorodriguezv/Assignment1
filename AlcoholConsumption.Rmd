@@ -1,6 +1,6 @@
 ---
 title: "Alcohol Consumption"
-author: "Mario Alonso Rodriguez & Raju Adhikari"
+author: "Raju Adhikari & Mario Alonso Rodriguez"
 date: "October 6th, 2016"
 output: pdf_document
 ---
@@ -10,7 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ### First, let's load all the packages that are needed
 library(dplyr)
 library(ggplot2)
-library()
 ```
 
 ## Data
@@ -24,14 +23,14 @@ Drinks <- read.csv('https://raw.githubusercontent.com/fivethirtyeight/data/maste
 ### A simple summary of descriptive statistics of all the dataset
 summary(Drinks)
 
-### The means of all the variables in the dataset
+### The means of all the variables show the average world consumption of each drink
 for (i in 1:length(names(Drinks))) {
     Drinks[, i] %>%
     mean() %>%
     round(digits = 1) %>%
     paste(names(Drinks)[i], ., '\n') %>%  cat() }
 
-### Std deviation of all the variables 
+### The standard deviation of all the variables shows how dispersed is the data
 for (i in 1:length(names(Drinks))) {
     Drinks[, i] %>%
     sd() %>%
@@ -43,7 +42,7 @@ for (i in 1:length(names(Drinks))) {
 
 ## Histograms
 
-Histograms are really usefull to look at the distribution of the data
+Histograms are really usefull to look at the distribution of the data.
 
 ```{r histograms}
 ### Distribution of beer consumption
@@ -66,5 +65,21 @@ hist(Drinks$wine_servings,
 
 Seems like most of the countries consumed less than 50 of each in 2010. Let's unskew the distributions. 
 
-```{r transformation}
 
+```{r transformation}
+## Remove cases with zeros
+Drinks[Drinks==0] <- NA
+Drinks <- na.omit(Drinks)
+
+## Transformation of beer consumption
+log(Drinks$beer_servings) %>% hist(main = "Beer consumption in 2010")
+
+## Transformation of spirits consumption
+log(Drinks$spirit_servings) %>% hist(main = "Spirit consumption in 2010")
+
+## Transformation of spirits consumption
+log(Drinks$wine_servings) %>% hist(main = "Wine consumption in 2010")
+
+```
+
+Thanks for the review. You can check the other dataset for this assignment in this link
