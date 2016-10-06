@@ -6,10 +6,7 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-### First, let's load all the packages that are needed
-library(dplyr)
-library(ggplot2)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Data
@@ -17,6 +14,9 @@ library(ggplot2)
 This is an assignment that utilizes fivethirtyeight.com's dataset on alcohol consumption in the world. This data is taken from the World Health Organization.  
 
 ```{r Drinks, message=FALSE, warning=FALSE}
+### First, let's load the packages that are needed
+library(dplyr)
+
 ### Load the raw data from fivethirtyeight's Github
 Drinks <- read.csv('https://raw.githubusercontent.com/fivethirtyeight/data/master/alcohol-consumption/drinks.csv')
 
