@@ -8,7 +8,7 @@ Datasets used in the Repository: 1. Dataset on Alcohol Consumption (From fivethi
                                  2. Dataset on Diamonds (From R´s in-built database)
                                  
 We performed basic descriptive statistics using the datasets and made some histogram plots.
-We have also performed a pull request via Github with another team (Rafael and Rita) 
+We have also performed a pull request via Github with another team (Rafael and Rita).
 
 Rafael - Pull Request
 
