@@ -3,6 +3,7 @@ author: "Raju Adhikari & Mario Alonso Rodriguez"
 date: "October 6th, 2016"
 
 ### First, let's load the packages that are needed
+setwd('/Users/mariorodriguez/Desktop/Assignment1')
 library(dplyr)
 
 ### Load the raw data from fivethirtyeight's Github
@@ -58,3 +59,4 @@ log(Drinks$wine_servings) %>% hist(main = "Wine consumption in 2010", border = '
 
 ## Thanks for the review. You can check the other dataset for this assignment in this link 
 
+source('Assignment1_Raju.R')
