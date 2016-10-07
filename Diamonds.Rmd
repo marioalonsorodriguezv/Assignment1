@@ -1,5 +1,5 @@
 ---
-title: "Alcohol Consumption"
+title: "Diamonds"
 author: "Raju Adhikari & Mario Alonso Rodriguez"
 date: "October 6th, 2016"
 output: pdf_document
