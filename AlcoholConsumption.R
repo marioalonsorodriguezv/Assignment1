@@ -2,7 +2,7 @@ title: "Alcohol Consumption"
 author: "Raju Adhikari & Mario Alonso Rodriguez"
 date: "October 6th, 2016"
 
-### First, let's load the packages that are needed
+### First, let's set the working directory and load the packages that are needed
 setwd('/Users/mariorodriguez/Desktop/Assignment1')
 library(dplyr)
 
@@ -57,6 +57,6 @@ log(Drinks$spirit_servings) %>% hist(main = "Spirit consumption in 2010", border
 ## Transformation of spirits consumption
 log(Drinks$wine_servings) %>% hist(main = "Wine consumption in 2010", border = 'blue')
 
-## Thanks for the review. You can check the other dataset for this assignment in this link 
+## Thanks for the review. Here is the source for the other data
 
-source('Assignment1_Raju.R')
+source('Diamonds.R')
