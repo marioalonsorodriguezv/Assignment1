@@ -8,3 +8,6 @@ Datasets used in the Repository: 1. Dataset on Alcohol Consumption (From fivethi
                                  2. Dataset on Diamonds (From R´s in-built database)
                                  
 Open first the file on Alcohol Consumption, given that this sources the one on diamonds
+
+
+Rafael - Pull Request
