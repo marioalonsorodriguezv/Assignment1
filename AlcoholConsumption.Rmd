@@ -20,7 +20,7 @@ This is an assignment that utilizes fivethirtyeight.com's dataset on alcohol con
 ### Load the raw data from fivethirtyeight's Github
 Drinks <- read.csv('https://raw.githubusercontent.com/fivethirtyeight/data/master/alcohol-consumption/drinks.csv')
 
-### A simple summary of descriptive statistics of all the dataset
+### A simple summary of descriptive statistics of all the dataset cool
 summary(Drinks)
 
 ### The means of all the variables show the average world consumption of each drink
