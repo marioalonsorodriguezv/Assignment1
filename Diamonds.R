@@ -1,17 +1,13 @@
-title: "Diamonds"
-author: "Raju Adhikari & Mario Alonso Rodriguez"
-date: "October 7th, 2016"
-
-#Loading the packages necessary for this assignemnt###
+#Setting the working directory and oading the packages necessary for this assignment###
+setwd('/Users/mariorodriguez/Desktop/Assignment1')
 library(dplyr)
 library(ggplot2)
 
 #Listing the in-built dataset from R###
 data()
 
-#Loading the dataset diamonds and obtaining its description###
+#Loading the dataset diamonds###
 data(diamonds)
-? diamonds
 
 #Listing all the variables that the dataset contains###
 names(diamonds)
