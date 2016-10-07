@@ -1,6 +1,6 @@
 title: "Alcohol Consumption"
 author: "Raju Adhikari & Mario Alonso Rodriguez"
-date: "October 6th, 2016"
+date: "October 7th, 2016"
 
 ### First, let's set the working directory and load the packages that are needed
 setwd('/Users/mariorodriguez/Desktop/Assignment1')

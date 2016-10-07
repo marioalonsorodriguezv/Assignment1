@@ -1,3 +1,7 @@
+title: "Diamonds"
+author: "Raju Adhikari & Mario Alonso Rodriguez"
+date: "October 7th, 2016"
+
 #Loading the packages necessary for this assignemnt###
 library(dplyr)
 library(ggplot2)
@@ -39,6 +43,3 @@ table(diamonds$cut, diamonds$color)
 
 #It simply shows that they are roughly equally distributed across cut. 
 
-# Please find another dataset in this link.
-
-source ("AlcoholConsumption")
