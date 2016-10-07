@@ -7,7 +7,8 @@ Name of Repository on Github: Assignment1
 Datasets used in the Repository: 1. Dataset on Alcohol Consumption (From fivethirtyeight.com)
                                  2. Dataset on Diamonds (From R´s in-built database)
                                  
-Open first the file on Alcohol Consumption, given that this sources the one on diamonds
-
+We performed basic descriptive statistics using the datasets and made some histogram plots.
+We have also performed a pull request via Github with another team (Rafael and Rita) 
 
 Rafael - Pull Request
+
