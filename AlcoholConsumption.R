@@ -54,4 +54,4 @@ log(Drinks$spirit_servings) %>% hist(main = "Spirit consumption in 2010", border
 log(Drinks$wine_servings) %>% hist(main = "Wine consumption in 2010", border = 'blue')
 
 ## Thanks for the review. Here is the source for the other file
-source ("Diamonds.R")
+source ("Diamonds.R", print.eval = TRUE)
