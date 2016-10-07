@@ -74,5 +74,5 @@ table(diamonds$cut, diamonds$color)
 
 Please find the other part of this assignment on this link
 
-[Linktodrinks](https://github.com/marioalonsorodriguezv/Assignment1/blob/master/AlcoholConsumption.Rmd "Drinks")
+[Drinks](https://github.com/marioalonsorodriguezv/Assignment1/blob/master/AlcoholConsumption.Rmd)
  
