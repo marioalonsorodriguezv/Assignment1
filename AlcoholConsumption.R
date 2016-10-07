@@ -55,3 +55,6 @@ log(Drinks$spirit_servings) %>% hist(main = "Spirit consumption in 2010", border
 
 ## Transformation of spirits consumption
 log(Drinks$wine_servings) %>% hist(main = "Wine consumption in 2010", border = 'blue')
+
+## Thanks for the review. You can check the other dataset for this assignment in this link https://github.com/marioalonsorodriguezv/Assignment1/blob/master/Assignment1_Raju.R "Diamonds)
+
