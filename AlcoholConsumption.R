@@ -9,7 +9,7 @@ Drinks <- read.csv('https://raw.githubusercontent.com/fivethirtyeight/data/maste
 summary(Drinks)
 
 ### The means of all the variables show the average world consumption of each drink
-for (i in 1:length(names(Drinks))) {
+for (i in 2:length(names(Drinks))) {
   Drinks[, i] %>%
     mean() %>%
     round(digits = 1) %>%
